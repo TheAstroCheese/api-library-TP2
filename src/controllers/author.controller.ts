@@ -54,7 +54,7 @@ export class AuthorController extends Controller {
 
   // Met à jour un auteur par ID
   @Patch("{id}")
-  @Security("jwt", ["author:write"])
+  @Security("jwt", ["author:update"])
   public async updateAuthor(
     @Path() id: number,
     @Body() requestBody: AuthorInputPatchDTO,

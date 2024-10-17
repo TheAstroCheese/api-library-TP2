@@ -46,7 +46,7 @@ export class BookCollectionController extends Controller {
   }
 
   @Patch("{id}")
-  @Security("jwt", ["bookCollection:write"])
+  @Security("jwt", ["bookCollection:update"])
   public async patchBookCollection(
     @Path("id") id: number,
     @Body() requestBody: BookCollectionInputPatchDTO,

@@ -31,18 +31,22 @@ export class AuthenticationService {
         scopes = [  
           "user:read",
           "user:write",
+          "user:update",
           "user:delete",
 
           "author:read",
           "author:write",
+          "author:update",
           "author:delete",
 
           "book:read",
           "book:write",
+          "book:update",
           "book:delete",
 
           "bookCollection:read",
           "bookCollection:write",
+          "bookCollection:update",
           "bookCollection:delete",
         ] 
       } 
@@ -51,15 +55,19 @@ export class AuthenticationService {
         scopes = [  
           "user:read",
           "user:write",
+          "user:update",
 
           "author:read",
+          "author:update",
           "author:write",
 
           "book:read",
+          "book:update",
           "book:write",
 
           "bookCollection:read",
           "bookCollection:write",
+          "bookCollection:update",
           "bookCollection:delete",
         ] 
       } 

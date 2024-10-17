@@ -448,7 +448,7 @@
 				"security": [
 					{
 						"jwt": [
-							"user:write"
+							"user:update"
 						]
 					}
 				],
@@ -599,7 +599,7 @@
 				"security": [
 					{
 						"jwt": [
-							"bookCollection:write"
+							"bookCollection:update"
 						]
 					}
 				],
@@ -779,7 +779,7 @@
 				"security": [
 					{
 						"jwt": [
-							"book:write"
+							"book:update"
 						]
 					}
 				],
@@ -1029,7 +1029,7 @@
 				"security": [
 					{
 						"jwt": [
-							"author:write"
+							"author:update"
 						]
 					}
 				],

@@ -47,7 +47,7 @@ export class BookController extends Controller {
   }
 
   @Patch("{id}")
-  @Security("jwt", ["book:write"])
+  @Security("jwt", ["book:update"])
   public async patchBook(
     @Path("id") id: number,
     @Body() requestBody: BookInputPatchDTO,

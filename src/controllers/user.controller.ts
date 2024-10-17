@@ -53,7 +53,7 @@ export class UserController extends Controller {
 
   // Met à jour un utilisateur par ID
   @Patch("{id}")
-  @Security("jwt", ["user:write"])
+  @Security("jwt", ["user:update"])
   public async updateUser(
     @Path() id: number,
     @Body() requestBody: UserInputPatchDTO,

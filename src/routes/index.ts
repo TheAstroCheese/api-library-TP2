@@ -300,7 +300,7 @@ export function RegisterRoutes(app: Router) {
         });
         // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
         app.patch('/users/:id',
-            authenticateMiddleware([{"jwt":["user:write"]}]),
+            authenticateMiddleware([{"jwt":["user:update"]}]),
             ...(fetchMiddlewares<RequestHandler>(UserController)),
             ...(fetchMiddlewares<RequestHandler>(UserController.prototype.updateUser)),
 
@@ -424,7 +424,7 @@ export function RegisterRoutes(app: Router) {
         });
         // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
         app.patch('/book-collections/:id',
-            authenticateMiddleware([{"jwt":["bookCollection:write"]}]),
+            authenticateMiddleware([{"jwt":["bookCollection:update"]}]),
             ...(fetchMiddlewares<RequestHandler>(BookCollectionController)),
             ...(fetchMiddlewares<RequestHandler>(BookCollectionController.prototype.patchBookCollection)),
 
@@ -579,7 +579,7 @@ export function RegisterRoutes(app: Router) {
         });
         // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
         app.patch('/books/:id',
-            authenticateMiddleware([{"jwt":["book:write"]}]),
+            authenticateMiddleware([{"jwt":["book:update"]}]),
             ...(fetchMiddlewares<RequestHandler>(BookController)),
             ...(fetchMiddlewares<RequestHandler>(BookController.prototype.patchBook)),
 
@@ -796,7 +796,7 @@ export function RegisterRoutes(app: Router) {
         });
         // WARNING: This file was auto-generated with tsoa. Please do not modify it. Re-run tsoa to re-generate this file: https://github.com/lukeautry/tsoa
         app.patch('/authors/:id',
-            authenticateMiddleware([{"jwt":["author:write"]}]),
+            authenticateMiddleware([{"jwt":["author:update"]}]),
             ...(fetchMiddlewares<RequestHandler>(AuthorController)),
             ...(fetchMiddlewares<RequestHandler>(AuthorController.prototype.updateAuthor)),
 
