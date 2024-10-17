@@ -13,9 +13,9 @@
 # Exercice noté
 
 1) Créer trois utilisateurs :
-    - admin
-    - gerant
-    - utilisateur
+    - admin (mdp : admin)
+    - gerant  (mdp : gerant)
+    - utilisateur  (mdp : utilisateur)
 2) Générer des tokens contenant des droits de lecture/ecriture/suppression pour les tables author/book/bookCollection
 3) Gérer les droits d'accès suivants :
     - l'administrateur a tout les droits

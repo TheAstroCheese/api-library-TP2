@@ -25,7 +25,83 @@ export class AuthenticationService {
     // Vérifie si le mot de passe est correct
     if (password === decodedPassword) {
       // Si l'utilisateur est authentifié, on génère un JWT
-      const token = jwt.sign({ username: user.username }, JWT_SECRET, {
+      let scopes :string[] = []; 
+
+      if (user.username == "admin"){
+        scopes = [  
+          "user:read",
+          "user:write",
+          "user:delete",
+
+          "author:read",
+          "author:write",
+          "author:delete",
+
+          "book:read",
+          "book:write",
+          "book:delete",
+
+          "bookCollection:read",
+          "bookCollection:write",
+          "bookCollection:delete",
+        ] 
+      }  
+
+      if (user.username == "admin"){
+        scopes = [  
+          "user:read",
+          "user:write",
+          "user:delete",
+
+          "author:read",
+          "author:write",
+          "author:delete",
+
+          "book:read",
+          "book:write",
+          "book:delete",
+
+          "bookCollection:read",
+          "bookCollection:write",
+          "bookCollection:delete",
+        ] 
+      } 
+
+      if (user.username == "gerant"){
+        scopes = [  
+          "user:read",
+          "user:write",
+
+          "author:read",
+          "author:write",
+
+          "book:read",
+          "book:write",
+
+          "bookCollection:read",
+          "bookCollection:write",
+          "bookCollection:delete",
+        ] 
+      } 
+
+      if (user.username == "utilisateur"){
+        scopes = [  
+          "user:read",
+
+          "author:read",
+
+          "book:read",
+          "book:write",
+
+          "bookCollection:read",
+        ] 
+      } 
+
+      const token = jwt.sign({ 
+        username: user.username,
+        scopes:scopes 
+      
+      }, JWT_SECRET, {
         expiresIn: "1h",
       });
       return token;
