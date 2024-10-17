@@ -45,26 +45,6 @@ export class AuthenticationService {
           "bookCollection:write",
           "bookCollection:delete",
         ] 
-      }  
-
-      if (user.username == "admin"){
-        scopes = [  
-          "user:read",
-          "user:write",
-          "user:delete",
-
-          "author:read",
-          "author:write",
-          "author:delete",
-
-          "book:read",
-          "book:write",
-          "book:delete",
-
-          "bookCollection:read",
-          "bookCollection:write",
-          "bookCollection:delete",
-        ] 
       } 
 
       if (user.username == "gerant"){
